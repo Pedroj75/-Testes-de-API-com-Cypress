@@ -75,12 +75,24 @@ describe('Desafio Técnico - Testes de API com Cypress', () => {
       method: 'POST',
       url: 'https://dummyjson.com/auth/login',
       body: {
-        username: 'kminchelle',
-        password: '0lelplR'
-      },
-      failOnStatusCode: false // Permite falha controlada
-    }).then((response) => {
-      expect([200, 400]).to.include(response.status)
-    })
+      username: "emilys",
+      password: "emilyspass",
+      expiresInMins: 60
+  },
+  failOnStatusCode: false
+}).then((response) => {
+  expect(response.status).to.eq(200)
+  expect(response.body).to.have.property('accessToken')
+  expect(response.body).to.have.property('refreshToken')
+})
+
+  })
+})
+it('atualizar usuário (PUT)', () => {
+  cy.request('PUT', 'https://dummyjson.com/users/1', {
+    firstName: 'Pedro Atualizado'
+  }).then((response) => {
+    expect(response.status).to.eq(200)
+    expect(response.body).to.have.property('firstName', 'Pedro Atualizado')
   })
 })
