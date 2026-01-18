@@ -11,7 +11,7 @@ O desafio consistiu em implementar testes automatizados de API que realizassem m
 
 Também foi solicitado:
 - Tratamento de autenticação
-- Geração de token para uso na API
+- Validação do retorno de autenticação e token
 - Execução de pelo menos 10 chamadas de API
 - Geração de relatório de testes ao final da execução
 

@@ -69,6 +69,16 @@ describe('Desafio Técnico - Testes de API com Cypress', () => {
       .its('status').should('eq', 200)
   })
 
+  it('atualizar usuário (PUT)', () => {
+  cy.request('PUT', 'https://dummyjson.com/users/1', {
+    firstName: 'Pedro Atualizado'
+  }).then((response) => {
+    expect(response.status).to.eq(200)
+    expect(response.body).to.have.property('firstName', 'Pedro Atualizado')
+  })
+})
+
+
   // 11. Autenticação 
   it('realizar login com usuário válido', () => {
     cy.request({
@@ -86,13 +96,5 @@ describe('Desafio Técnico - Testes de API com Cypress', () => {
   expect(response.body).to.have.property('refreshToken')
 })
 
-  })
-})
-it('atualizar usuário (PUT)', () => {
-  cy.request('PUT', 'https://dummyjson.com/users/1', {
-    firstName: 'Pedro Atualizado'
-  }).then((response) => {
-    expect(response.status).to.eq(200)
-    expect(response.body).to.have.property('firstName', 'Pedro Atualizado')
   })
 })
