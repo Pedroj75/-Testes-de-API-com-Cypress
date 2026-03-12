@@ -24,23 +24,20 @@ Também foi solicitado:
 - Mochawesome (geração de relatório de testes)
 
 ---
-
 ## Estrutura do Projeto
 
-📁 Estrutura do Projeto
-
-prova_esig_api/
-├── cypress/
-│   ├── e2e/
-│   │   └── esig_api.cy.js
-│   ├── reports/
-│   │   └── mochawesome.html
-│   └── support/
-│       └── e2e.js
-├── cypress.config.js
-├── package.json
-├── DummyJSON.postman_collection.json
-└── README.md
+- prova_esig_api/
+  - cypress/
+    - e2e/
+      - esig_api.cy.js
+    - reports/
+      - mochawesome.html
+    - support/
+      - e2e.js
+  - cypress.config.js
+  - package.json
+  - DummyJSON.postman_collection.json
+  - README.md
 ---
 
 ## Como executar o projeto
