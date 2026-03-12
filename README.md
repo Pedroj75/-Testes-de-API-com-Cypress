@@ -27,6 +27,8 @@ Também foi solicitado:
 
 ## Estrutura do Projeto
 
+📁 Estrutura do Projeto
+
 prova_esig_api/
 ├── cypress/
 │   ├── e2e/
@@ -39,7 +41,6 @@ prova_esig_api/
 ├── package.json
 ├── DummyJSON.postman_collection.json
 └── README.md
-
 ---
 
 ## Como executar o projeto
